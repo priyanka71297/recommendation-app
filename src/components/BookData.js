@@ -93,7 +93,7 @@ const BookData = () => {
                             </input>
                         </form>
                     </div>
-                    <div className="col-4 ml-md-auto px-3 py-3 bg-white shadow">
+                    <div className="col-3 ml-md-auto px-3 py-3 bg-white shadow">
                         <p className="lead text-info">Boook data as entered:</p>
                         <hr />
                         <p>BookId: {book.bookId}</p>
@@ -101,7 +101,7 @@ const BookData = () => {
                         <p>Price: {book.price}</p>
                     </div>
 
-                    <div className="col-4 ml-md-auto px-3 py-3 bg-white shadow">
+                    <div className="col-3 ml-md-auto px-3 py-3 bg-white shadow">
                         <p className="lead text-info">Book data after submit:</p>
                         <hr />
                         <p>BookId: {bookDataToDisplay.bookId}</p>
