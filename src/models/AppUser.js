@@ -1,8 +1,8 @@
 
-// class AppUser {
-//     userName;
-//     password;
-//     role;
-// }
+class AppUser {
+    userName;
+    password;
+    role;
+}
 
-// export default AppUser;
+export default AppUser;

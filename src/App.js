@@ -1,71 +1,30 @@
-import BookData from './components/BookData';
+
+import Routes from './Routes';
 
 const App = () => {
 
   return (
-      <div>
-          <h1>App Component</h1>
-          <p>Welcome...</p>
-          <BookData />
-      </div>
-
-  );
+    <div className="cotainer-fluid">
+        <Routes />
+    </div>
+  )
+ 
+  
 }
+  
 export default App;
-
-
-
-
-
-// import React from "react";
-// const App extends React.Component{
-//   render(){
-//     return(<div>
-//       <h1>Book Recomendation App</h1>
-//       <p>Welcome to Book Recomendation App</p>
-//       <BookData/>
+// const [appData, setAppData] = useState(20+20);
+// return (
+//   <div className="container-fluid">
+//     <div className="container">
+//       <div>
+//         <p className="display-4 text-primary">App Component</p>
+//         <hr />
+//       <p>Welcome...</p>
+//       <p> {appData} </p>
 //       </div>
-//       );
-//   }
-// }
-// export default App;
-// function App(){
-//   return(
-
-//     <div>
-//       <h1>Book Recomendation App</h1>
-//       <p>Welcome to Book Recomendation App</p>
-//      </div>
-//   );
-// }
-// export default App;
-
-
-
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-//export default App;
+//       </div>
+//       <BookData />
+//       <SignIn />
+//   </div>
+// );
