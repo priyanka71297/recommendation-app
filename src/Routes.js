@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import BookData from './components/BookData';
 import SignIn from './components/SignIn';
+
 const Routes = () => {
 
     return (
@@ -9,8 +10,8 @@ const Routes = () => {
             <div>
                 <BrowserRouter>
                 <Switch>
-                    <Route path='signin'> <SignIn/> </Route>
-                    <Route path='bookdata'> <BookData/> </Route>
+                    <Route path='/bookdata'> <BookData/> </Route>
+                    <Route path='/signin'> <SignIn/> </Route>
                 </Switch>
                 </BrowserRouter>
             </div>
