@@ -17,21 +17,6 @@ export default App;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React from "react";
 // const App extends React.Component{
 //   render(){

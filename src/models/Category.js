@@ -1,7 +1,7 @@
-class Category {
+// class Category {
 
-    categoryId;
-    category;
-}
+//     categoryId;
+//     category;
+// }
 
-export default Category;
+// export default Category;

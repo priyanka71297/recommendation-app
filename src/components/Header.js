@@ -16,7 +16,7 @@ const Header = () => {
                         <div className=" navbar-nav ml-auto">
                             <Link className="nav-link" to='/home'>HOME</Link>
                             <Link className="nav-link" to='/signin'>SIGN IN</Link>
-                            <Link className="nav-link" to='/login'>SIGN OUT</Link>
+                            <Link className="nav-link" to='/signUp'>SIGN UP</Link>
                         </div>
                     </div>
                 </nav>
@@ -29,7 +29,7 @@ export default Header;
 
 
 
-// // header without bootstrap
+// // // header without bootstrap
 
 // import { Link } from 'react-router-dom';
 
@@ -39,11 +39,11 @@ export default Header;
 //         <div>
 //             <div>
 //                 <Link to="/" >
-//                      <img height='30px' src='https://prod.ucwe.capgemini.com/wp-content/themes/capgemini2020/assets/images/logo.svg' alt='Capgemini Logo'/>
+//                        <img height='30px' src='https://i.pinimg.com/originals/34/e1/56/34e156f3d3c9a9222c9e725b17abbf13.jpg' alt='App Logo' />
 //                 </Link>
-//                 <Link to="/emp" >EmpData</Link>
-//                 <Link to="/parent" >Parent</Link>
-//                 <Link to="/login" >Login</Link>
+//                 <Link to="/home" >Home</Link>
+//                 <Link to="/signIn" >Sign In</Link>
+//                 <Link to="/signUp" >Sign Up</Link>
 //             </div>
 //         </div >
 //     );
