@@ -1,22 +1,27 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import BookData from './components/BookData';
 import SignIn from './components/SignIn';
+import Header from './components/Header';
+// import SignUp from "./components/SignUp";
+import Home from './components/Home';
 
 const Routes = () => {
 
     return (
-        <div className="container-fluid">
-            <p>Routes Component</p>
+        <div>
             <div>
                 <BrowserRouter>
+                <Header />
                 <Switch>
                     <Route path='/bookdata'> <BookData/> </Route>
                     <Route path='/signin'> <SignIn/> </Route>
+                    <Route path='/home'> <Home/> </Route>
+                    {/* <Route path='/signup'> <SignUp/> </Route> */}
                 </Switch>
                 </BrowserRouter>
             </div>
         </div>
-    )
+    );
 }
 
 export default Routes;

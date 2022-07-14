@@ -31,24 +31,25 @@
 
 // // // // header without bootstrap
 
-// // import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-// // const Header = () => {
+const Header = () => {
 
-// //     return (
-// //         <div>
-// //             <div>
-// //                 <Link to="/" >
-// //                        <img height='30px' src='https://i.pinimg.com/originals/34/e1/56/34e156f3d3c9a9222c9e725b17abbf13.jpg' alt='App Logo' />
-// //                 </Link>
-// //                 <Link to="/home" >Home</Link>
-// //                 <Link to="/signIn" >Sign In</Link>
-// //                 <Link to="/signUp" >Sign Up</Link>
-// //             </div>
-// //         </div >
-// //     );
-// // }
+    return (
+        <div>
+            <div>
+                <Link to="/" >
+                       <img height='30px' src='https://i.pinimg.com/originals/34/e1/56/34e156f3d3c9a9222c9e725b17abbf13.jpg' alt='App Logo' />
+                </Link>
+                <Link to="/home" >Home</Link>
+                <Link to="/bookdata" >Book Data</Link>
+                <Link to="/signIn" >Sign In</Link>
+                <Link to="/signUp" >Sign Up</Link>
+            </div>
+        </div >
+    );
+}
 
-// // export default Header;
+export default Header;
 
 
