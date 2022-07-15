@@ -2,9 +2,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import BookData from './components/BookData';
 import SignIn from './components/SignIn';
 import Header from './components/Header';
-// import SignUp from "./components/SignUp";
+import SignUp from "./components/SignUp";
 import Home from './components/Home';
-
+import Footer from './components/Footer';
+import About from './components/About';
 const Routes = () => {
 
     return (
@@ -16,8 +17,10 @@ const Routes = () => {
                     <Route path='/bookdata'> <BookData/> </Route>
                     <Route path='/signin'> <SignIn/> </Route>
                     <Route path='/home'> <Home/> </Route>
-                    {/* <Route path='/signup'> <SignUp/> </Route> */}
+                    <Route path='/signup'> <SignUp/> </Route>
+                    <Route path='/about'> <About/> </Route>
                 </Switch>
+                <Footer />
                 </BrowserRouter>
             </div>
         </div>

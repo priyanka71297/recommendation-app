@@ -16,12 +16,12 @@ const SignIn = () => {
     };
 
     const submitAppUser = (event) => {
-        if (appUser.userName === "Sonu" && appUser.password === "Sonu") {
-            alert(`SignIn for ${appUser.userName} is successful!`);
+        if (appUser.userName === "Priyanka" && appUser.password === "Priyanka") {
+            alert(`Sign In for ${appUser.userName} is successful!`);
             setAppUser({ userName: '', password: '', role: '' });
         }
         else {
-            alert(`SignIn failed for ${appUser.userName}!`);
+            alert(`Sign In failed for ${appUser.userName}!`);
             setAppUser({ userName: '', password: '', role: '' });
         }
         event.preventDefault();
@@ -29,7 +29,7 @@ const SignIn = () => {
 
     return (
         <div className="container" >
-            <p className="display-4 text-primary py-3">Sign In Component</p>
+            <p className="display-4 text-primary py-3">Sign In</p>
             <hr />
             <div className="col-3 mt-3 py-3 shadow bg-white" >
                 <h1 className="lead text-primary pb-2">Sign In</h1>
