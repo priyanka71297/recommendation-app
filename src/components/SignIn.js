@@ -17,7 +17,8 @@ const SignIn = () => {
         });
     };
 
-    const submitAppUser = (event) => {
+    // const submitAppUser = (event) => {
+    const submitSignIn = (event) => {
         console.log(appUser);
         axios.post('http://localhost:9999/user/sign-in', appUser)
             .then((response) => {
@@ -36,7 +37,7 @@ const SignIn = () => {
             <hr />
             <div className="col-3 mt-3 py-3 shadow bg-white " >
                 <h1 className="lead text-primary pb-2">SignIn</h1>
-                <form className="form form-group form-dark " onSubmit={submitAppUser}>
+                <form className="form form-group form-dark " onSubmit={submitSignIn}>
                     <div>
                         <input
                             type="text"
@@ -59,7 +60,7 @@ const SignIn = () => {
                             required
                         />
                         <div class="form-group">
-                            <select class="form-control mb-3" name="role" id="role" onChange={handleAppUser}>
+                            <select class="form-control mb-3" name="role" string="role" onChange={handleAppUser}>
                                 <option value="Role">Select a role</option>
                                 <option value="ADMIN">ADMIN</option>
                                 <option value="USER">USER</option>
@@ -67,17 +68,17 @@ const SignIn = () => {
                         </div>
                         <input
                             type="submit"
-                            id="submit"
+                            string="submit"
                             name="submit"
                             className="form-control btn btn-outline-primary"
                             value="SignIn"
-                            onClick={submitAppUser}
+                            onClick={submitSignIn}
                         />
                     </div>
                 </form>
             </div>
             <div className="py-3 ">
-                <Link to="/register" className="btn btn-outline-primary col-3">You can also Sign Up</Link>
+                <Link to="/SignUp" className="btn btn-outline-primary col-3">You can also Sign Up</Link>
             </div>
         </div >
     )

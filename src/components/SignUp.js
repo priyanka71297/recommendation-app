@@ -58,7 +58,7 @@ const SignUp = () => {
                             required
                         />
                         <div class="form-group">
-                            <select class="form-control mb-3" name="role" id="role" onChange={handleAppUser}>
+                            <select class="form-control mb-3" name="role" string="role" onChange={handleAppUser}>
                                 <option value="Role">Select a role</option>
                                 <option value="ADMIN">ADMIN</option>
                                 <option value="USER">USER</option>
@@ -66,7 +66,7 @@ const SignUp = () => {
                         </div>
                         <input
                             type="submit"
-                            id="submit"
+                            string="submit"
                             name="submit"
                             className="form-control btn btn-outline-primary"
                             value="SignUp"
