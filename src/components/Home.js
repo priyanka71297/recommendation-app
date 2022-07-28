@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div
             style={{
-                backgroundImage: `url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_655998316_2000149920009280219_363765.jpg")`,
+                backgroundImage: `url("https://thumbs.dreamstime.com/b/library-flat-orthogonal-icons-public-library-flat-orthogonal-elements-collection-bookshelves-librarian-desk-reading-room-115230469.jpg")`,
                 backgroundPosition: `cover`
             }}
         >

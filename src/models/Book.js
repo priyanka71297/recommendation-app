@@ -1,15 +1,15 @@
-// import Author from "./Autor";
+import Author from "./Author";
 
-// class Book {
+class Book {
 
-//     bookId;
-//     bookName;
-//     price;
-//     rating;
-//     authorId;
-//     categoryId;
-//     author= new Author();
+    bookId;
+    bookName;
+    price;
+    rating;
+    authorId;
+    categoryId;
+    author= new Author();
 
-// }
+}
 
-// export default Book;
+export default Book;

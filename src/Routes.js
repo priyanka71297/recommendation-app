@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp";
 import Home from './components/Home';
 import Footer from './components/Footer';
 import About from './components/About';
+import Logout from "./components/LogOut";
 const Routes = () => {
 
     return (
@@ -19,6 +20,7 @@ const Routes = () => {
                     <Route path='/home'> <Home/> </Route>
                     <Route path='/signup'> <SignUp/> </Route>
                     <Route path='/about'> <About/> </Route>
+                    <Route path='/logout'> <Logout/> </Route>
                 </Switch>
                 <Footer />
                 </BrowserRouter>

@@ -1,18 +1,29 @@
-
-import Routes from './Routes';
+import Routes from "./Routes";
 
 const App = () => {
 
   return (
-    <div className="cotainer-fluid">
-        <Routes />
-    </div>
-  )
- 
-  
+    <div>
+      <Routes />
+    </div >
+  );
 }
-  
+
 export default App;
+
+
+// import Routes from './Routes';
+
+// const App = () => {
+
+//   return (
+//     <div className="cotainer-fluid">
+//         <Routes />
+//     </div>
+//   ) 
+// }
+  
+// export default App;
 // const [appData, setAppData] = useState(20+20);
 // return (
 //   <div className="container-fluid">

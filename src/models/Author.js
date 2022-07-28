@@ -1,7 +1,7 @@
-// class Author {
+class Author {
 
-//     authorId;
-//     authorName;
-// }
+    authorId;
+    authorName;
+}
 
-// export default Author;
+export default Author;
