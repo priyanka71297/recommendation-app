@@ -15,18 +15,18 @@ const AppUserSlice = createSlice({
             state.currentUser = action.payload;
             state.isSignedIn = true;
         },
-        logoutUser: (state, action) => {
+        signOutUser: (state, action) => {
             console.log(state);
-            state.isLoggedIn = false;
+            state.isSignedIn = false;
         },
         updateUser: (state, action) => {
             console.log(state);
             state.currentUser = action.payload;
-            state.isLoggedIn = true;
+            state.isSignedIn = true;
         }
     }
 });
 
-export const { signInUser, logoutUser, updateUser } = AppUserSlice.actions;
+export const { signInUser, signOutUser, updateUser } = AppUserSlice.actions;
 
 export default AppUserSlice.reducer;
