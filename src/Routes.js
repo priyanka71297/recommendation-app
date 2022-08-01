@@ -8,7 +8,6 @@ import SignOut from "./components/SignOut";
 import SignUp from "./components/SignUp";
 import UserProfile from './components/UserProfile';
 import UpdateUser from './components/UpdateUser';
-
 import Footer from './components/Footer';
 import About from './components/About';
 import AuthorData from "./components/AuthorData";
@@ -26,7 +25,7 @@ const Routes = () => {
                             <Header />
                             <div style={{ minHeight: "92vh" }} >
                                 <Switch>
-                                    {/* <Route path='/bookdata'> <BookData /> </Route> */}
+                                    <Route path='/bookdata'> <BookData /> </Route>
                                     <Route path='/authordata'> <AuthorData /> </Route>
                                     <Route path='/signout'> <SignOut /> </Route>
                                     <Route path='/profile'> <UserProfile />  </Route>
@@ -38,7 +37,6 @@ const Routes = () => {
                             </div>
                         </BrowserRouter>
                     </div>}
-
             </div>
             <div>
                 {!signInStatus &&
@@ -49,10 +47,11 @@ const Routes = () => {
                                 <Switch>
                                     <Route path='/signin'> <SignIn /> </Route>
                                     <Route path='/signup'> <SignUp /> </Route>
-                                    <Route path='/'> <Home />  </Route>
                                     <Route path='/about'> <About /> </Route>
+                                    <Route path='/'> <Home />  </Route>
                                     <Route path='/footer'> <Footer /> </Route>
                                 </Switch>
+                                <Footer />
                             </div>
                         </BrowserRouter>
                     </div>}

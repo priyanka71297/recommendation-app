@@ -1,5 +1,5 @@
 import Author from "./Author";
-
+import Category from "./Category";
 class Book {
 
     bookId;
@@ -9,7 +9,7 @@ class Book {
     authorId;
     categoryId;
     author= new Author();
-
+    category= new Category();
 }
 
 export default Book;

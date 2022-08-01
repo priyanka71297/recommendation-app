@@ -22,6 +22,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className=" navbar-nav ml-auto">
                             <div> {signInStatus && <Link className="nav-link" to='/authordata'>AuthorData</Link>} </div>
+                            <div> {signInStatus && <Link className="nav-link" to='/bookdata'>BookData</Link>} </div>
                             <div> {!signInStatus && <Link className="nav-link" to='/signup'>SignUp</Link>} </div>
                             <div> {!signInStatus && <Link className="nav-link" to='/signin'>SignIn</Link>} </div>
                             <div> {!signInStatus && <Link className="nav-link" to='/about'>About</Link>} </div>
