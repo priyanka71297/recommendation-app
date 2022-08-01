@@ -9,7 +9,6 @@ const store = configureStore({
         author: authorReducer,
         book: bookReducer,
         appUser: appUserReducer
-        // create more reducers for other components 
     }
 });
 

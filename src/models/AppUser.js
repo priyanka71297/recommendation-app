@@ -1,4 +1,3 @@
-
 class AppUser {
     userName;
     password;

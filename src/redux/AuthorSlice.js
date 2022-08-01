@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import Author from '../models/Author';
 import { getAuthorByIdService } from '../services/AuthorService';
 
 const fetchAuthorById = createAsyncThunk(

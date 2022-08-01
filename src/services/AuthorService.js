@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// Create services for other components in this way. 
-
 const springBootAppUrl = `http://localhost:9999/`;
 
 const getAuthorByIdService = (id) => {
@@ -23,7 +21,5 @@ const addAuthorService = (author) => {
     console.log(`addAuthorService`);
     return axios.post(`${springBootAppUrl}admin/addAuthor`, author);
 }
-
-// add more functionalities here 
 
 export { getAuthorByIdService, getAuthorByNameService, getAllAuthorsService, addAuthorService };
