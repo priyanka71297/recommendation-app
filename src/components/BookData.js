@@ -223,7 +223,7 @@ const BookData = () => {
                 }
                 </div>
             </div>
-            <div className="bg-white shadow shadow-regular mb-3 mt-3 px-3 py-3 pb-3 pt-3 col-6">
+            {/* <div className="bg-white shadow shadow-regular mb-3 mt-3 px-3 py-3 pb-3 pt-3 col-6">
                 <p className="lead">Get All Books</p>
                 <div className="form form-group" >
                     <input
@@ -258,7 +258,7 @@ const BookData = () => {
                     }
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="bg-white shadow shadow-regular mb-4 mt-4 px-4 py-4 pb-4 pt-4 col-10">
                 <p className="lead">Book store is here..</p>
                 <div className="form form-group" >

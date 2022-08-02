@@ -190,7 +190,7 @@ const AuthorData = () => {
                 }
                 </div>
             </div>
-            <div className="bg-white shadow shadow-regular mb-3 mt-3 px-3 py-3 pb-3 pt-3 col-6">
+            {/* <div className="bg-white shadow shadow-regular mb-3 mt-3 px-3 py-3 pb-3 pt-3 col-6">
                 <p className="lead">Get All Authors</p>
                 <div className="form form-group" >
                     <input
@@ -233,7 +233,7 @@ const AuthorData = () => {
                     }
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="bg-white shadow shadow-regular mb-3 mt-3 px-3 py-3 pb-3 pt-3 col-8">
                 <p className="lead">Get Book By Authors</p>
                 <div className="form form-group" >
