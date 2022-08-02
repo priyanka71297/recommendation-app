@@ -19,7 +19,6 @@ const AuthorData = () => {
     
     // fetch data from store 
     const authorDataFromStore = useSelector((store) => { return store.author.authorObj; });
-    // const bookDataFromStore = useSelector((store) => { return store.book. bookObj; });
     // send data to store - steps - 1, 2
     // step 1
     const dispatch = useDispatch();
@@ -165,12 +164,12 @@ const AuthorData = () => {
                         <p>Author Id: {author.authorId} </p>
                         <p>Author Name: {author.authorName} </p>
                        
-                        <p>Book Id:{(author.book && author.book.bookId)}</p>
-                        <p>Book Name:{(author.book && author.book.bookName)}</p>   
-                        <p>Price:{(author.book && author.book.price)}</p>
-                        <p>Category Id:{(author.book && author.book.CategoryId)}</p>
-                        <p>Category:{(author.book && author.book.category)}</p> 
-                        <p>Rating:{(author.book && author.book.rating)}</p>                          
+                        <p>Book Id:{(author.books && author.books.bookId)}</p>
+                        <p>Book Name:{(author.books && author.books.bookName)}</p>   
+                        <p>Price:{(author.books && author.books.price)}</p>
+                        <p>Category Id:{(author.books && author.books.CategoryId)}</p>
+                        <p>Category:{(author.books && author.books.category)}</p> 
+                        <p>Rating:{(author.books && author.books.rating)}</p>
                     </div>
                 }
                 </div>
@@ -180,12 +179,12 @@ const AuthorData = () => {
                         <p>Author Id: {authorDataFromStore.authorId} </p>
                         <p>Author Name: {authorDataFromStore.authorName} </p>
                       
-                       <p>{(authorDataFromStore.book && authorDataFromStore.book.bookId)}</p>
-                       {/* <p>{(authorDataFromStore.book && authorDataFromStore.book.bookName)}</p>
-                       <p>{(authorDataFromStore.book && authorDataFromStore.book.price)}</p>
-                       <p>{(authorDataFromStore.book && authorDataFromStore.book.categoryId)}</p>
-                       <p>{(authorDataFromStore.book && authorDataFromStore.book.category)}</p>
-                       <p>{(authorDataFromStore.book && authorDataFromStore.book.rating)}</p> */}
+                       <p>{(authorDataFromStore.books && authorDataFromStore.books.bookId)}</p>
+                       <p>{(authorDataFromStore.books && authorDataFromStore.books.bookName)}</p>
+                       <p>{(authorDataFromStore.books && authorDataFromStore.books.price)}</p>
+                       <p>{(authorDataFromStore.books && authorDataFromStore.books.categoryId)}</p>
+                       <p>{(authorDataFromStore.books && authorDataFromStore.books.category)}</p>
+                       <p>{(authorDataFromStore.books && authorDataFromStore.books.rating)}</p>
                         
                     </div>
                 }
@@ -285,159 +284,3 @@ const AuthorData = () => {
 }
 
 export default AuthorData;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-
-// const AuthorData = () => {
-//     let [id, setAuthorId] = useState('');
-//     let [name, setAuthorName] = useState('');
-
-//     let [authorDataToDisplay, setAuthorDataToDisplay] = useState('');
-
-//     const handleChange = (evt) => {
-//         setAuthorId(evt.target.value);
-//         setAuthorDataToDisplay({
-//             id: '',
-//             name: ''
-//         });
-//     }
-
-//     const getAuthorById = (evt) => {
-//         console.log(id);
-//         axios.get(`http://localhost:9999/user/get-author-by-id/${id}`)
-//             .then((response) => {
-//                 setAuthorDataToDisplay(response.data);
-//                 setAuthorId('');
-//             })
-//             .catch(() => {
-//                 alert(`Author with AuthorId ${id} not found!`);
-//                 setAuthorId('');
-//                 setAuthorDataToDisplay({
-//                     id: '',
-//                     name: ''
-//                 });
-//             });
-//         evt.preventDefault();
-//     }
-
-//     const handleChange1 = (evt) => {
-//         setAuthorName(evt.target.value);
-//         setAuthorDataToDisplay({
-//             id: '',
-//             name: ''
-//         });
-//     }
-
-//     const getAuthorByName = (evt) => {
-//         console.log(name);
-//         axios.get(`http://localhost:9999/user/get-author-by-name/${name}`)
-//             .then((response) => {
-//                 setAuthorDataToDisplay(response.data);
-//                 setAuthorName(" ");
-//             })
-//             .catch(() => {
-//                 alert(`Author with name ${name} not found!`);
-//                 setAuthorName('');
-//                 setAuthorDataToDisplay({
-//                     id: '',
-//                     name: ''
-//                 });
-//             });
-//         evt.preventDefault();
-//     }
-
-
-
-//     return (
-//         <div className="container">
-//             <div>
-//                 <p className="display-4 text-primary py-3">AuthorData</p>
-//                 <hr />
-//                 <p className="lead">Search Your Author Here!!!!!</p>
-//                 <div className="row pt-3">
-//                     <div className="col-3 md-auto px-3 pt-3 bg-white shadow">
-//                         <p className="lead text-info">Search Author By Id:</p>
-//                         <form className="form form-group">
-//                             <input
-//                                 className="form-control mb-3"
-//                                 type="number"
-//                                 id="id"
-//                                 name="id"
-//                                 value={id}
-//                                 placeholder="Enter id"
-//                                 onChange={handleChange}
-//                                 autoFocus>
-//                             </input>
-//                             <input
-//                                 className="form-control btn btn-outline-primary"
-//                                 type="submit"
-//                                 value="Search Author"
-//                                 onClick={getAuthorById}>
-//                             </input>
-//                         </form>
-//                     </div>    
-//                     <p className="lead">Search Author by name</p>
-//                 <div className="row pt-3">
-//                     <div className="col-3 md-auto px-3 pt-3 bg-white shadow">
-//                         <p className="lead text-info">Search Author:</p>
-//                         <form className="form form-group">
-//                             <input
-//                                 className="form-control mb-3"
-//                                 type="string"
-//                                 id="name"
-//                                 name="name"
-//                                 value={name}
-//                                 placeholder="Enter name"
-//                                 onChange={handleChange1}
-//                                 autoFocus>
-//                             </input>
-//                             <input
-//                                 className="form-control btn btn-outline-primary"
-//                                 type="submit"
-//                                 value="Search Author"
-//                                 onClick={getAuthorByName}>
-//                             </input>
-//                         </form>
-//                     </div>
-//                     <div className="col-4 ml-auto mr-auto px-3 py-3 bg-white shadow">
-//                         <p className="lead text-info">Author details:</p>
-//                         <hr />
-//                         <p>AuthorId: {authorDataToDisplay.authorId}</p>
-//                         <p>AuthorName: {authorDataToDisplay.authorName}</p>
-
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//         </div>
-//     );
-// }
-
-
-// export default AuthorData;
-
-
-
-
