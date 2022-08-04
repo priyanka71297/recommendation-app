@@ -6,6 +6,7 @@ import AppUser from '../models/AppUser';
 import { signInUser, signOutUser } from '../redux/AppUserSlice';
 import { signInService } from '../services/AppUserService';
 
+
 const SignIn = () => {
 
     const [appUser, setAppUser] = useState(new AppUser());
@@ -35,11 +36,13 @@ const SignIn = () => {
     }
 
     return (
+        <div style={{backgroundImage:"url(https://www.jmmnews.com/wp-content/uploads/2017/10/history-marketing-theory-banner-1140x410.jpg)",backgroundRepeat:"no-repeat", backgroundSize:"contain",backgroundPosition: 'center center'
+    }}>
         <div className="container" >
             <p className="display-4 text-primary py-3">SignIn</p>
             <hr />
             <div className="col-3 mt-3 py-3 shadow bg-white" >
-                <h1 className="lead text-primary pb-2">SignIn</h1>
+                {/* <h1 className="lead text-primary pb-2">SignIn</h1> */}
                 <form className="form form-group form-dark " onSubmit={submitAppUser}>
                     <div>
                         <input
@@ -83,6 +86,7 @@ const SignIn = () => {
                 <Link to="/signUp" className="btn btn-outline-primary col-3">You can also Sign Up. Click here</Link>
             </div>
         </div >
+        // </div >
     )
 }
 export default SignIn;

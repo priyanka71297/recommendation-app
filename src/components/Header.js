@@ -46,55 +46,39 @@ const Header = () => {
         <div className=' bg-dark'>
             <div className=' container-fluid'>
                 <nav className="navbar navbar-expand-lg navbar-dark">
-                    <Link className="navbar-brand" to='/'>
-                        <img height='30px' src='https://www.kindpng.com/picc/m/616-6169709_library-logo-of-a-person-holding-a-book.png' alt='App Logo' />
+                    <Link className="navbar-nav" to='/'>
+                        <img height='40px' src='https://www.kindpng.com/picc/m/616-6169709_library-logo-of-a-person-holding-a-book.png' alt='App Logo' />
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className=" navbar-nav ml-auto">
+                            
                              <div> {signInStatus &&
                                 <div className="nav-item dropdown navbar-dark">
                                     <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" onClick={submitGetAllAuthors}>
                                         Author
                                     </Link>
                                     <div className="dropdown-menu">
-                                        {/* <Link className="dropdown-item" onClick={submitGetAllAuthors}>Your authors are here</Link> */}
                                         <div className="dropdown-divider"></div>
-                                        {/* <input
-                                            type="button"
-                                            className="btn btn-outline-primary form-control mb-3 mt-3"
-                                            value="Get All Authors"
-                                            onClick={submitGetAllAuthors}
-                                        /> */}
+                                       
                                         <div>
                                             <div> {(allAuthors) &&
                                                 <div>
                                                     {
                                                         <ul className="table">
-                                                            {/* <thead>
-                                                                <tr>
-                                                                    <th>Author Name</th>
-                                                                </tr>
-                                                            </thead> */}
-                                                            {allAuthors.map((a =>
+                                                            {allAuthors.slice(0, 6).map((a =>
                                                                 <tbody>
                                                                     <tr>
-                                                                        {/* <li>{a.authorId}</li> */}
                                                                         <li >{a.authorName}</li>
-
-                                                                        {/* <li>{(a.book && a.book.bookId)}</li>
-                                                                        <li>{(a.book && a.book.bookName)}</li>
-                                                                        <li>{(a.book && a.book.price)}</li>
-                                                                        <li>{(a.book && a.book.rating)}</li>
-                                                                       <li>{(a.book && a.book.authorId)}</li>
-                                                                        <li>{(a.book && a.book.categoryId)}</li> */}
-                                                                    </tr>
+                                                                  </tr>
                                                                 </tbody>
                                                             ))}
                                                         </ul>
                                                     }
+                                                    <div> {<Link  to="/viewauthors">All Authors</Link>} </div>
+                                                    <div> {<Link  to="/moreauthorsinfo">More Authors</Link>} </div>
                                                 </div>
                                             }
                                             </div>
@@ -103,48 +87,33 @@ const Header = () => {
                                 </div>
                             }
                             </div>
-                            
+
+
                             <div> {signInStatus &&
                                 <div className="nav-item dropdown navbar-dark">
                                     <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" onClick={submitGetAllBooks}>
                                         Books
                                     </Link>
                                     <div className="dropdown-menu">
-                                        {/* <Link className="dropdown-item" onClick={submitGetAllAuthors}>Your authors are here</Link> */}
                                         <div className="dropdown-divider"></div>
-                                        {/* <input
-                                            type="button"
-                                            className="btn btn-outline-primary form-control mb-3 mt-3"
-                                            value="Get All Authors"
-                                            onClick={submitGetAllAuthors}
-                                        /> */}
+                                      
                                         <div>
                                             <div> {(allBooks) &&
                                                 <div>
                                                     {
                                                         <ul className="table">
-                                                            {/* <thead>
-                                                                <tr>
-                                                                    <th>Author Name</th>
-                                                                </tr>
-                                                            </thead> */}
-                                                            {allBooks.map((b =>
+                                                           
+                                                            {allBooks.slice(0, 7).map((b =>
                                                                 <tbody>
                                                                     <tr>
-                                                                        {/* <li>{a.authorId}</li> */}
                                                                         <li >{b.bookName}</li>
-
-                                                                        {/* <li>{(a.book && a.book.bookId)}</li>
-                                                                        <li>{(a.book && a.book.bookName)}</li>
-                                                                        <li>{(a.book && a.book.price)}</li>
-                                                                        <li>{(a.book && a.book.rating)}</li>
-                                                                       <li>{(a.book && a.book.authorId)}</li>
-                                                                        <li>{(a.book && a.book.categoryId)}</li> */}
                                                                     </tr>
                                                                 </tbody>
                                                             ))}
                                                         </ul>
                                                     }
+                                                    <div> {<Link  to="/viewbooks">All Books</Link>} </div>
+                                                    <div> {<Link  to="/morebooksinfo">More Books</Link>} </div>
                                                 </div>
                                             }
                                             </div>
@@ -153,8 +122,11 @@ const Header = () => {
                                 </div>
                             }
                             </div>
+
+
                             <div> {signInStatus && <Link className="nav-link" to='/authordata'>AuthorData</Link>} </div>
                             <div> {signInStatus && <Link className="nav-link" to='/bookdata'>BookData</Link>} </div>
+                            <div> {signInStatus && <Link className="nav-link" to='/admin'>Admin</Link>} </div>
                             <div> {!signInStatus && <Link className="nav-link" to='/signup'>SignUp</Link>} </div>
                             <div> {!signInStatus && <Link className="nav-link" to='/signin'>SignIn</Link>} </div>
                             <div> {!signInStatus && <Link className="nav-link" to='/about'>About</Link>} </div>

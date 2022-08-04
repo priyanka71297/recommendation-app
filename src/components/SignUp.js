@@ -32,7 +32,10 @@ const SignUp = () => {
     }
 
     return (
+        <div style={{backgroundImage:"url(https://www.maxpixel.net/static/photo/2x/Sunset-Grass-Hand-Reading-Book-Read-Garden-3801210.jpg)",backgroundRepeat:"no-repeat", backgroundSize:"contain",
+    }}>
         <div className="container" >
+        <div style={{ minHeight: "150vh", textShadow: '2px 2px #f2f2f2' }} className="container">
             <p className="display-4 text-primary py-3">SignUp</p>
             <hr />
             <div className="col-3 mt-3 py-3 shadow bg-white" >
@@ -80,8 +83,9 @@ const SignUp = () => {
             <div className="py-3 ">
                 <Link to="/SignIn" className="btn btn-outline-primary col-3">Have an account? Sign in</Link>
             </div>
-
+            </div>
         </div >
+        // </div >
     )
 }
 export default SignUp;

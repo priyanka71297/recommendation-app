@@ -70,19 +70,19 @@ const BookData = () => {
             })
     }
   
-    const submitGetAllBooks= (evt) => {
-        evt.preventDefault();
-        getAllBooksService()
-            .then((response) => {
-                setAllBooks(response.data);
-                console.log(response.data);
-                console.log(allBooks);
-            })
-            .catch((error) => {
-                alert(error);
-                setAllBooks([]);
-            });
-    }
+    // const submitGetAllBooks= (evt) => {
+    //     evt.preventDefault();
+    //     getAllBooksService()
+    //         .then((response) => {
+    //             setAllBooks(response.data);
+    //             console.log(response.data);
+    //             console.log(allBooks);
+    //         })
+    //         .catch((error) => {
+    //             alert(error);
+    //             setAllBooks([]);
+    //         });
+    // }
 
     const submitAddBook = (evt) => {
         evt.preventDefault();
@@ -259,7 +259,7 @@ const BookData = () => {
                     </div>
                 </div>
             </div> */}
-            <div className="bg-white shadow shadow-regular mb-4 mt-4 px-4 py-4 pb-4 pt-4 col-10">
+            {/* <div className="bg-white shadow shadow-regular mb-4 mt-4 px-4 py-4 pb-4 pt-4 col-10">
                 <p className="lead">Book store is here..</p>
                 <div className="form form-group" >
                     <input
@@ -301,7 +301,7 @@ const BookData = () => {
                     }
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div >
     );
 }

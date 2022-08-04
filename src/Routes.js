@@ -11,6 +11,11 @@ import UpdateUser from './components/UpdateUser';
 import Footer from './components/Footer';
 import About from './components/About';
 import AuthorData from "./components/AuthorData";
+import Admin from "./components/Admin";
+import ViewBooks from "./components/ViewBooks";
+import ViewAuthors from "./components/ViewAuthors";
+import MoreBooksInfo from "./components/MoreBooksInfo";
+import MoreAuthorsInfo from "./components/MoreAuthorsInfo";
 
 const Routes = () => {
 
@@ -25,11 +30,16 @@ const Routes = () => {
                             <Header />
                             <div style={{ minHeight: "92vh" }} >
                                 <Switch>
+                                    <Route path='/viewauthors'> <ViewAuthors /> </Route>
+                                    <Route path='/viewbooks'> <ViewBooks /> </Route>
+                                    <Route path='/morebooksinfo'> <MoreBooksInfo /> </Route>
+                                    <Route path='/moreauthorsinfo'> <MoreAuthorsInfo /> </Route>
                                     <Route path='/bookdata'> <BookData /> </Route>
                                     <Route path='/authordata'> <AuthorData /> </Route>
                                     <Route path='/signout'> <SignOut /> </Route>
                                     <Route path='/profile'> <UserProfile />  </Route>
                                     <Route path='/update'> <UpdateUser />  </Route>
+                                    <Route path='/admin'> <Admin />  </Route>
                                     <Route path='/footer'> <Footer /> </Route>
                                     <Route path='/'> <Home />  </Route>
                                 </Switch>
