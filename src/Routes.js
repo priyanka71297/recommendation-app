@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import BookData from './components/BookData';
+import Search from './components/Search';
 import Header from './components/Header';
 import Home from './components/Home';
 import SignIn from './components/SignIn';
@@ -10,13 +10,13 @@ import UserProfile from './components/UserProfile';
 import UpdateUser from './components/UpdateUser';
 import Footer from './components/Footer';
 import About from './components/About';
-import AuthorData from "./components/AuthorData";
-import Admin from "./components/Admin";
-import ViewBooks from "./components/ViewBooks";
+import ViewCategory from "./components/ViewCategory";
 import ViewAuthors from "./components/ViewAuthors";
-import MoreBooksInfo from "./components/MoreBooksInfo";
+import ViewBooks from "./components/ViewBooks";
+import Admin from "./components/Admin";
 import MoreAuthorsInfo from "./components/MoreAuthorsInfo";
-
+import MoreBooksInfo from "./components/MoreBooksInfo";
+import MoreCategoryInfo from "./components/MoreCategoryInfo";
 const Routes = () => {
 
     const signInStatus = useSelector((store) => { return store.appUser.isSignedIn; });
@@ -30,16 +30,17 @@ const Routes = () => {
                             <Header />
                             <div style={{ minHeight: "92vh" }} >
                                 <Switch>
+                                    <Route path='/viewcategory'> <ViewCategory /> </Route>
                                     <Route path='/viewauthors'> <ViewAuthors /> </Route>
                                     <Route path='/viewbooks'> <ViewBooks /> </Route>
-                                    <Route path='/morebooksinfo'> <MoreBooksInfo /> </Route>
+                                    <Route path='/morecategoryinfo'> <MoreCategoryInfo /> </Route>
                                     <Route path='/moreauthorsinfo'> <MoreAuthorsInfo /> </Route>
-                                    <Route path='/bookdata'> <BookData /> </Route>
-                                    <Route path='/authordata'> <AuthorData /> </Route>
+                                    <Route path='/morebooksinfo'> <MoreBooksInfo /> </Route>
+                                    <Route path='/search'> <Search /> </Route>
                                     <Route path='/signout'> <SignOut /> </Route>
                                     <Route path='/profile'> <UserProfile />  </Route>
                                     <Route path='/update'> <UpdateUser />  </Route>
-                                    <Route path='/admin'> <Admin />  </Route>
+                                    <Route path='/admin'> <Admin /> </Route>
                                     <Route path='/footer'> <Footer /> </Route>
                                     <Route path='/'> <Home />  </Route>
                                 </Switch>

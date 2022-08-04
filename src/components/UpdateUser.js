@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
-import AppUser from '../models/AppUser';
 import { updateUserService } from '../services/AppUserService';
 import { updateUser } from '../redux/AppUserSlice';
 
@@ -37,55 +36,58 @@ const UpdateUser = () => {
     }
 
     return (
-        <div className="container" >
-            <p className="display-4 text-primary py-3">Update User Profile</p>
-            <hr />
-            <div className="col-3 mt-3 py-3 shadow bg-white" >
-                <h1 className="lead text-primary pb-2">Update</h1>
-                <form className="form form-group form-dark " onSubmit={submitAppUser}>
-                    <div>
-                        <input
-                            type="text"
-                            name="userName"
-                            id="userName"
-                            className="form-control mb-3"
-                            placeholder="Enter username"
-                            value={userDataToUpdate.userName}
-                            onChange={handleAppUser}
-                            readOnly
-                        />
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            className="form-control mb-3"
-                            placeholder="Enter password"
-                            value={userDataToUpdate.password}
-                            onChange={handleAppUser}
-                            required
-                        />
-                        <div className="form-group">
-                            <select className="form-control mb-3" name="role" string="role" onChange={handleAppUser}>
-                                <option value="Role">Select a role</option>
-                                <option value="ADMIN">ADMIN</option>
-                                <option value="USER">USER</option>
-                            </select>
+        <div style={{
+            backgroundColor: "lightblue", backgroundRepeat: "no-repeat", backgroundSize: "contain"
+        }}>
+            <div className="container" >
+                <p className="display-4 text-primary py-3">Update User Profile</p>
+                <hr />
+                <div className="col-3 mt-3 py-3 shadow bg-alert alert-warning" >
+                    <h1 className="lead text-primary pb-2">Update</h1>
+                    <form className="form form-group form-dark " onSubmit={submitAppUser}>
+                        <div>
+                            <input
+                                type="text"
+                                name="userName"
+                                id="userName"
+                                className="form-control mb-3"
+                                placeholder="Enter username"
+                                value={userDataToUpdate.userName}
+                                onChange={handleAppUser}
+                                readOnly
+                            />
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                className="form-control mb-3"
+                                placeholder="Enter password"
+                                value={userDataToUpdate.password}
+                                onChange={handleAppUser}
+                                required
+                            />
+                            <div className="form-group">
+                                <select className="form-control mb-3" name="role" string="role" onChange={handleAppUser}>
+                                    <option value="Role">Select a role</option>
+                                    <option value="ADMIN">ADMIN</option>
+                                    <option value="USER">USER</option>
+                                </select>
+                            </div>
+                            <input
+                                type="submit"
+                                id="submit"
+                                name="submit"
+                                className="form-control btn btn-outline-primary"
+                                value="Update"
+                                onClick={submitAppUser}
+                            />
                         </div>
-                        <input
-                            type="submit"
-                            id="submit"
-                            name="submit"
-                            className="form-control btn btn-outline-primary"
-                            value="Update"
-                            onClick={submitAppUser}
-                        />
-                    </div>
-                </form>
-            </div>
-        </div >
+                    </form>
+                </div>
+            </div >
+        </div>
     )
 }
 export default UpdateUser;
-
 
 

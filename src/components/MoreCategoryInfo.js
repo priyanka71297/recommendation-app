@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getAllBooksService } from "../services/BookService";
 
-const MoreAuthorsInfo = () => {
+const MoreCategoryInfo = () => {
 
     const [allBooks, setAllBooks] = useState([]);
 
@@ -30,38 +30,38 @@ const MoreAuthorsInfo = () => {
             backgroundColor: "lightblue", backgroundRepeat: "no-repeat", backgroundSize: "contain"
         }}>
             <div className="bg-alert alert-success shadow shadow-regular mb-3 mt-3 px-3 py-3 pb-3 pt-3 col-8">
-                <p className="lead">Get Book By Authors</p>
+                <p className="lead">Get Book By Category</p>
                 <div className="form form-group" >
                     <input
                         type="button"
                         className="btn btn-outline-primary form-control mb-3 mt-3"
-                        value="Get All Authors"
+                        value="Get All Category"
                         onClick={submitGetAllBooks}
                     />
                 </div>
                 <div>
                     <div> {(allBooks) &&
                         <div>
-                            <p className="text-primary text-center font-weight-bold lead">List of All Athors</p>
+                            <p className="text-primary text-center font-weight-bold lead">List of All Category</p>
                             {
                                 <table className="table">
                                     <thead>
                                         <tr>
-                                            <th>Author Name</th>
+                                            <th>Category</th>
                                             <th>Book Name</th>
                                             <th>Price</th>
                                             <th>Rating</th>
-                                            <th>Category</th>
+                                            <th>Author Name</th>
                                         </tr>
                                     </thead>
                                     {allBooks.map((b =>
                                         <tbody>
                                             <tr>
-                                                <td>{(b.author && b.author.authorName)}</td>
+                                                <td>{(b.category && b.category.categoryName)}</td>
                                                 <td>{b.bookName}</td>
                                                 <td>{b.price}</td>
                                                 <td>{b.rating}</td>
-                                                <td>{(b.category && b.category.categoryName)}</td>
+                                                <td>{(b.author && b.author.authorName)}</td>
                                             </tr>
                                         </tbody>
                                     ))}
@@ -76,4 +76,4 @@ const MoreAuthorsInfo = () => {
     );
 }
 
-export default MoreAuthorsInfo;
+export default MoreCategoryInfo;
