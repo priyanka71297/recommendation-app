@@ -182,7 +182,7 @@ const Search = () => {
                         </div>
                         <div> {(author.authorName) &&
                             <div>
-                                <p className="lead text-primary">Author Details from State Object</p>
+                                <p className="lead text-primary">Your author details are here...</p>
                                 <p>Author Id: {author.authorId} </p>
                                 <p>Author Name: {author.authorName} </p>
                                 <table className="table">
@@ -251,7 +251,7 @@ const Search = () => {
                         </div>
                         <div> {(category.categoryName) &&
                             <div>
-                                <p className="lead text-primary">Category Details from State Object</p>
+                                <p className="lead text-primary">Your author details are here...</p>
                                 <p>Category Id: {category.categoryId} </p>
                                 <p>Category Name: {category.categoryName} </p>
                                 <table className="table">
